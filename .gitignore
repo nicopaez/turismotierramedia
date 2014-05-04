@@ -4,3 +4,4 @@ target/
 logs/
 /dependency-reduced-pom.xml
 /reports
+.DS_Store
