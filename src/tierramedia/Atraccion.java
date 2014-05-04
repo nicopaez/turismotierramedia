@@ -29,8 +29,8 @@ public class Atraccion {
 		return this.costo;
 	}
 
-	public boolean esTipo(TipoAtraccion preferenciaTipoAtraccion) {
-		return this.tipoAtraccion.equals(tipoAtraccion);
+	public boolean esTipo(TipoAtraccion unTipoDeAtraccion) {
+		return this.tipoAtraccion.equals(unTipoDeAtraccion);
 	}
 
 	public double distanciaA(Atraccion atraccion2) {

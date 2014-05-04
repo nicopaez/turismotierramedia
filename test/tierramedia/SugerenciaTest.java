@@ -48,4 +48,25 @@ public class SugerenciaTest {
 			Assert.assertTrue(copia.getAtracciones().contains(atraccion));
 		}
 	}
+	
+	@Test
+	public void incluyeTipoAtraccionDeberiaSerFalseSiNoIncluye() {
+		Sugerencia sugerencia = new Sugerencia();
+		int tiempoRequerido = 1;
+		int costo = 5;
+		sugerencia.agregarAtraccion(new Atraccion(tiempoRequerido, costo, TipoAtraccion.AVENTURA, new Coordenadas(1,0)));
+		sugerencia.agregarAtraccion(new Atraccion(tiempoRequerido, costo, TipoAtraccion.AVENTURA, new Coordenadas(2,0)));
+		Assert.assertFalse(sugerencia.incluyeTipoAtraccion(TipoAtraccion.PAISAJE));
+	}
+	
+	@Test
+	public void incluyeTipoAtraccionDeberiaSerTrueSiIncluye() {
+		Sugerencia sugerencia = new Sugerencia();
+		int tiempoRequerido = 1;
+		int costo = 5;
+		sugerencia.agregarAtraccion(new Atraccion(tiempoRequerido, costo, TipoAtraccion.AVENTURA, new Coordenadas(1,0)));
+		sugerencia.agregarAtraccion(new Atraccion(tiempoRequerido, costo, TipoAtraccion.AVENTURA, new Coordenadas(2,0)));
+		Assert.assertTrue(sugerencia.incluyeTipoAtraccion(TipoAtraccion.AVENTURA));
+	}
+
 }

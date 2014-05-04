@@ -10,7 +10,14 @@ public class CoordenadasTest {
 		Coordenadas coord1 = new Coordenadas(1, 1);
 		Coordenadas coord2 = new Coordenadas(1, 1);
 		
-		Assert.assertEquals(coord1, coord2);
+		Assert.assertTrue(coord1.equals(coord2));
 	}
 
+	@Test
+	public void equalDeberiaSerFalseParaDistintosValores() {
+		Coordenadas coord1 = new Coordenadas(1, 1);
+		Coordenadas coord2 = new Coordenadas(1, 2);
+		
+		Assert.assertFalse(coord1.equals(coord2));
+	}
 }

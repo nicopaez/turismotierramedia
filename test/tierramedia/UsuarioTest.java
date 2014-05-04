@@ -62,7 +62,7 @@ public class UsuarioTest {
 		Usuario usuario = new Usuario();
 		usuario.setTiempoDisponible(Integer.MAX_VALUE);
 		usuario.setPrefenciaTipoAtraccion(TipoAtraccion.AVENTURA);
-		usuario.setPresupuestoDisponible(5);
+		usuario.setPresupuestoDisponible(Integer.MAX_VALUE);
 		Sugerencia sugerencia = new Sugerencia();
 		int tiempoRequeridoDeVisita = 5;
 		int costo = 5;
