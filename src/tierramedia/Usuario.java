@@ -17,6 +17,8 @@ public class Usuario {
 	}
 
 	public void puntuarSugerencia(Sugerencia sugerencia) {
+		
+		/* esto esta simplicaficado, pues falta considerar el tiempo de translado */
 		if (sugerencia.getTiempoRequerido(this.velocidad) > this.tiempoDisponible) {
 			sugerencia.setPuntuacionUsuario(0);
 			return;
